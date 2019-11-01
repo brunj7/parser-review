@@ -2,14 +2,14 @@
 
 *Please check off boxes as applicable, and elaborate in comments below.  Your review is not limited to these topics, as described in the reviewer guide*
 
-- [ ] As the reviewer I confirm that there are no [conflicts of interest](#coi) for me to review this work (If you are unsure whether you are in conflict, please speak to your editor _before_ starting your review).
+- [x] As the reviewer I confirm that there are no [conflicts of interest](#coi) for me to review this work (If you are unsure whether you are in conflict, please speak to your editor _before_ starting your review).
 
 #### Documentation
 
 The package includes all the following forms of documentation:
 
 - [ ] **A statement of need** clearly stating problems the software is designed to solve and its target audience in README
-- [ ] **Installation instructions:** for the development version of package and any non-standard dependencies in README
+- [x] **Installation instructions:** for the development version of package and any non-standard dependencies in README
 - [ ] **Vignette(s)** demonstrating major functionality that runs successfully locally
 - [ ] **Function Documentation:** for all exported functions in R help
 - [ ] **Examples** for all exported functions in R Help that run successfully locally
@@ -46,4 +46,23 @@ Estimated hours spent reviewing:
 ---
 
 ### Review Comments
+
+Suggestions / comments:
+
+### Description of the package
+
+Description of the package could be more specific regarding how it refers to coordinates.
+
+-  Maybe `geographic coordintates` or `latitude and longitude coordinates`? I personally prefer the former because the use of geographic could also be referring to geographic vs projected coordinate systems (not covered by `parzer` by scope definition). 
+
+- Maybe add/switch an example to have using a Southern Hemisphere Lat using `S`? Just to demonstrate negative numbers transformation.
+
+
+### Specific functions
+
+for the functions using both Latitude and Longitude. By convention, in most of the GIS software/libraries (including sf) coordinates are define with `c(x=lon, y=lat)` format. I suggest to adopt this format for all the functions of `parzer` using both latitude and longitude (`parse_hemisphere`, `parse_lat_long`). For those same functions, I also suggest in the error handling of out of bound values to ask the user to check if they have not inverted lon-lat.
+
+
+### Other
+
 
