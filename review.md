@@ -61,13 +61,12 @@ Description of the package could be more specific regarding how it refers to `co
 ### Documentation
 
 -  Maybe add/switch an example to have using a Southern Hemisphere Lat using `S`? Just to demonstrate negative numbers transformation.
-- Maybe adding a vignette of a usecase of `parzer` of working with one of the spatial packages? I personally think that will reinforce the need of the statement of need.
+- Maybe adding a vignette of a use case of `parzer` of working with one of the spatial packages? I personally think that will reinforce the need of the statement of need.
 
 
 ### Specific functions
 
 - for the functions using both Latitude and Longitude. By convention, in most of the GIS software/libraries (including `sf`) coordinates are defined with `c(x=lon, y=lat)` format. I suggest to adopt this format for all the functions of `parzer` using both latitude and longitude (`parse_hemisphere`, `parse_lat_long`). For those same functions, I also suggest in the error handling of out of bound values to ask the user to check if they have not inverted Lon-lat.
-
 - I am not 100% convinced about the one letter function naming (d(), m(), s())... although I have to admit I am short in suggestions as the  name `degree` is probably used in many packages and won't be necessarily less ambiguous.
 
 
@@ -91,6 +90,6 @@ covr::package_coverage()
 # src/pz_parse_parts.cpp: 100.00%
 ```
 
-- Is there a way to reduce Rccp dependancies? 
+- Is there a way to reduce Rccp dependencies? 
 
 
