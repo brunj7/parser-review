@@ -72,7 +72,7 @@ Description of the package could be more specific regarding how it refers to `co
 
 ### Other
 
-- Not quite sure why `goodpractice` returned `covr` test as failed, whereas the unit testing coverage of the package seems to be good.
+- Not quite sure why `goodpractice` returned `covr` test as failed, whereas the unit testing coverage of the package seems to be good. Otherwise I ran several checks everything returned fine (https://github.com/brunj7/parzer-review/blob/master/jb_checks.R).
 
 ```r 
 covr::package_coverage()
